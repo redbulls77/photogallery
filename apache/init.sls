@@ -6,18 +6,18 @@ create.user:
 apache2:
   pkg.installed
 
-/var/www/html/index.html:
-  file.managed:
-    - source: salt://apache/index.html
-    - name: /var/www/html/index.html
+/var/www/html:
+  file.recurse:
+    - source: salt://apache
     - user: jade
     - group: jade
-    - mode: 644
+    - file_mode: 644
+    - dir_mode: 755
 
 apache2-service:
   service.running:
     - name: apache2
     - enable: True
     - watch:
-      - file: /var/www/html/index.html
+      - file: /var/www/html
 

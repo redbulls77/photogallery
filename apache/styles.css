@@ -1,76 +1,93 @@
 * {
-    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, sans-serif; /* Font style */
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
-    line-height: 1.6; /* Line height for readability */
-    background-color: white; /* White background for the entire page */
-    display: flex; /* Enable flexbox on the body */
-    flex-direction: column; /* Arrange children in a column */
-    min-height: 100vh; /* Ensure body takes at least full viewport height */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-/* Intro Section */
 .intro {
-    padding: 50px 20px; /* Padding for intro section */
-    text-align: center; /* Center text */
-    border-bottom: 1px solid #ccc; /* Grey line below intro section */
-    flex: 1; /* Allow intro section to take available space */
+    padding: 50px 20px;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+    flex: 1;
     color: grey;
 }
 
-/* Center Image */
 .center-image {
-    display: block; /* Make the image a block element */
-    margin: 2em auto; /* Center the image and add margin for spacing */
-    max-width: 80%; /* Default max width for mobile devices */
-    height: auto; /* Maintain aspect ratio */
+    display: block;
+    margin: 2em auto;
+    max-width: 80%;
+    height: auto;
 }
 
-/* Footer */
+.nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 2em;
+    padding: 0.5em;
+    cursor: pointer;
+    z-index: 10;
+}
+
+#prevButton {
+    left: 10px;
+}
+
+#nextButton {
+    right: 10px;
+}
+
 footer {
-    background-color: white; /* White background for footer */
-    padding: 20px; /* Padding for footer */
-    text-align: center; /* Center-align text */
-    border-top: 1px solid #ccc; /* Grey line above footer */
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #ccc;
     color: grey;
 }
 
 .footer-info {
-    display: flex; /* Flexbox for layout */
-    justify-content: space-between; /* Space between left and right */
-    align-items: center; /* Center vertically */
-    margin-top: 10px; /* Space above the footer-info section */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
 }
 
 .footer-left, .footer-right {
-    flex: 1; /* Allow equal space for left and right */
+    flex: 1;
 }
 
 .social {
-    margin-top: 10px; /* Space above social links */
+    margin-top: 10px;
 }
 
 .social a {
-    text-decoration: none; /* Remove underline from links */
-    color: #007bff; /* Link color */
+    text-decoration: none;
+    color: #007bff;
 }
 
 .social a:hover {
-    text-decoration: underline; /* Underline on hover */
+    text-decoration: underline;
 }
 
-/* Media Queries */
 @media (min-width: 600px) {
     .center-image {
-        max-width: 30%; /* 60% width for larger screens */
+        max-width: 30%;
     }
 
     .intro {
-        padding: 50px; /* Add padding for larger screens */
-        font-size: 1.5rem; /* Increase font size */
+        padding: 50px;
+        font-size: 1.5rem;
     }
 }
