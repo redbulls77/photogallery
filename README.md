@@ -4,7 +4,7 @@ A simple, web-based photo gallery that allows users to view images in a slidesho
 
 <img width="950" alt="demopicture" src="https://github.com/user-attachments/assets/6a211d6b-a06b-4ade-8d89-0fa45306007e">
 
-Instructions:
+#### Instructions:
 
 Download Vagrant and Virtualbox. Configure your Vagrantfile.
 
